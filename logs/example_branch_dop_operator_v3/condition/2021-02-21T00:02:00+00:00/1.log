@@ -1,0 +1,27 @@
+[2021-02-23 14:58:30,713] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:02:00+00:00 [queued]>
+[2021-02-23 14:58:32,000] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:02:00+00:00 [queued]>
+[2021-02-23 14:58:32,016] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-23 14:58:32,027] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2021-02-23 14:58:32,040] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-23 14:58:32,468] {taskinstance.py:1063} INFO - Executing <Task(BranchPythonOperator): condition> on 2021-02-21T00:02:00+00:00
+[2021-02-23 14:58:32,828] {standard_task_runner.py:52} INFO - Started process 219 to run task
+[2021-02-23 14:58:33,041] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'example_branch_dop_operator_v3', 'condition', '2021-02-21T00:02:00+00:00', '--job-id', '72', '--pool', 'default_pool', '--raw', '--subdir', '/home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py', '--cfg-path', '/tmp/tmpcjlhkz8z', '--error-file', '/tmp/tmpbvssj_50']
+[2021-02-23 14:58:33,089] {standard_task_runner.py:77} INFO - Job 72: Subtask condition
+[2021-02-23 14:58:35,528] {logging_mixin.py:104} INFO - Running <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:02:00+00:00 [running]> on host 0513e3a4eab6
+[2021-02-23 14:58:37,136] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=example_branch_dop_operator_v3
+AIRFLOW_CTX_TASK_ID=condition
+AIRFLOW_CTX_EXECUTION_DATE=2021-02-21T00:02:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-02-21T00:02:00+00:00
+[2021-02-23 14:58:37,195] {logging_mixin.py:104} INFO - ------------- exec dttm = 2021-02-21T00:02:00+00:00 and minute = 2
+[2021-02-23 14:58:37,218] {python.py:118} INFO - Done. Returned value was: dummy_task_1
+[2021-02-23 14:58:37,222] {skipmixin.py:124} INFO - Following branch dummy_task_1
+[2021-02-23 14:58:37,393] {skipmixin.py:155} INFO - Skipping tasks ['dummy_task_2']
+[2021-02-23 14:58:38,541] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=example_branch_dop_operator_v3, task_id=condition, execution_date=20210221T000200, start_date=20210223T145830, end_date=20210223T145838
+[2021-02-23 14:58:38,889] {local_task_job.py:188} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-02-23 14:58:38,957] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 219
+[2021-02-23 14:58:39,023] {taskinstance.py:1239} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-02-23 14:58:39,268] {process_utils.py:66} INFO - Process psutil.Process(pid=219, status='terminated', exitcode=1, started='14:58:32') (219) terminated with exit code 1

@@ -1,0 +1,25 @@
+[2021-02-23 15:03:47,330] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:35:00+00:00 [queued]>
+[2021-02-23 15:03:47,501] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:35:00+00:00 [queued]>
+[2021-02-23 15:03:47,503] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-23 15:03:47,504] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2021-02-23 15:03:47,514] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-23 15:03:47,563] {taskinstance.py:1063} INFO - Executing <Task(BranchPythonOperator): condition> on 2021-02-21T00:35:00+00:00
+[2021-02-23 15:03:47,588] {standard_task_runner.py:52} INFO - Started process 732 to run task
+[2021-02-23 15:03:47,631] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'example_branch_dop_operator_v3', 'condition', '2021-02-21T00:35:00+00:00', '--job-id', '335', '--pool', 'default_pool', '--raw', '--subdir', '/home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py', '--cfg-path', '/tmp/tmpx14h0k61', '--error-file', '/tmp/tmpl8x31wb8']
+[2021-02-23 15:03:47,640] {standard_task_runner.py:77} INFO - Job 335: Subtask condition
+[2021-02-23 15:03:47,806] {logging_mixin.py:104} INFO - Running <TaskInstance: example_branch_dop_operator_v3.condition 2021-02-21T00:35:00+00:00 [running]> on host 0513e3a4eab6
+[2021-02-23 15:03:47,969] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=example_branch_dop_operator_v3
+AIRFLOW_CTX_TASK_ID=condition
+AIRFLOW_CTX_EXECUTION_DATE=2021-02-21T00:35:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-02-21T00:35:00+00:00
+[2021-02-23 15:03:47,971] {logging_mixin.py:104} INFO - ------------- exec dttm = 2021-02-21T00:35:00+00:00 and minute = 35
+[2021-02-23 15:03:47,973] {python.py:118} INFO - Done. Returned value was: dummy_task_2
+[2021-02-23 15:03:47,975] {skipmixin.py:124} INFO - Following branch dummy_task_2
+[2021-02-23 15:03:48,003] {skipmixin.py:155} INFO - Skipping tasks ['dummy_task_1']
+[2021-02-23 15:03:48,194] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=example_branch_dop_operator_v3, task_id=condition, execution_date=20210221T003500, start_date=20210223T150347, end_date=20210223T150348
+[2021-02-23 15:03:48,481] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-02-23 15:03:48,526] {local_task_job.py:146} INFO - Task exited with return code 0
